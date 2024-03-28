@@ -1,0 +1,237 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff; /* White background */
+    color: #333;
+}
+
+header {
+    background-color: #001F3F;  /* Navy blue */
+    color: #fff;
+    padding: 1em;
+    text-align: center;      
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.search-bar-container {
+    margin-left: auto; /* Push the search bar to the right */
+}
+
+.search-bar {
+    padding: 5px;
+    /* Add more styling as needed */
+}
+
+nav {
+    background-color: #003366; /* Blue */
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1.2em;
+}
+
+nav button {
+    background-color: #001F3F; /* Navy blue */
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+section {
+    padding: 2em;
+}
+
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* Set a fixed height for the jumbotron */
+    background: url('https://via.placeholder.com/1920x1080') repeat; /* Background image */
+}
+
+.image-carousel {
+    display: flex;
+    width: 200%; /* Number of images times 100% */
+    animation: scrollImages 20s linear infinite;
+}
+
+.image {
+    width: 100%;
+    flex: 0 0 50%; /* 100% divided by number of images */
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the entire container */
+}
+
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Number of images times -100% */
+    }
+}
+
+.jumbotron h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2em;
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-card {
+    flex: 0 0 30%;
+    border: 1px solid #001F3F; /* Navy blue */
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+footer {
+    background-color: #001F3F; /* Navy blue */
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .feedback-container {
+        flex-direction: column;
+    }
+
+    .feedback-card {
+        flex: 0 0 100%;
+    }
+}
+
+/* Your existing styles for larger screens */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*For error Alerts */
+.error-alert {
+    background-color: #f44336;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.search-bar-container {
+    margin-right: 20px; /* Add some spacing between the search bar and other elements */
+}
+
+/*.search-bar {
+     Your existing styles for the search bar 
+} */
+
+.mobile-menu {
+    display: none; /* Initially hide the mobile menu */
+}
+
+.mobile-menu-toggle {
+    display: none; /* Initially hide the toggle button on larger screens */
+    cursor: pointer;
+} 
+
+.mobile-menu {
+    display: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+
+.search-bar-container {
+    margin-right: 20px;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu{
+        display: none;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar-container {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar-container {
+        margin-top: 10px; /* Adjust the spacing for smaller screens */
+        margin-right: 0;  /* Reset the right margin for smaller screens */
+    }
+
+    /* Hide the regular navigation on smaller screens */
+    nav {
+        display: none;
+    }
+
+}
