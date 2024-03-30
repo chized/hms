@@ -60,7 +60,7 @@ Route::get('/login', [UserController::class, 'login'])->name('login');
 Route::post('/users/authenticate', [UserController::class, 'authenticate'])->name('authenticate');
 
 //Get email validation
-Route::get('/email/validation', [EmailValidationController::class, 'validateEmail'])->name('email.validation');
+Route::get('/users/verifyEmail', [UserController::class, 'validateEmail'])->name('email.validation');
 
 //Show forgot password form
 Route::get('/forgot_password', [UserController::class, 'forgotPassword'])->name('forgot_password');

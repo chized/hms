@@ -80,9 +80,13 @@ class UserController extends Controller
         $user->email_verification_expires_at = $expirationTime;
         $user->save();
 
+        $user_id = $user->id;
+        $user = User::find($user_id);
+
         // Build the validation link
         $validationLink = route('email.validation', [
             'token' => $token,
+            'user_id' => $user->id, // Include the user ID in the link to prevent 'token hijacking
             'expiration' => $expirationTime->timestamp, // Include expiration time as a Unix timestamp
         ]);
 

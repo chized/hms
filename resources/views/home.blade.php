@@ -5,6 +5,11 @@
         {{ session('error') }}
     </div>
 @endif
+@if(session('success'))
+    <div class="success-alert">
+        {{ session('success') }}
+    </div>
+@endif
     <section>
         <div class="jumbotron">
             <div class="image-carousel">

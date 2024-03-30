@@ -151,8 +151,32 @@ header {
     color: white;
     padding: 15px;
     margin-bottom: 20px;
+    animation-name: fadeOut;
+    animation-duration: 15s; /* Duration of the animation */
 }
 
+/*For success Alerts */
+.success-alert {
+    background-color: #14d886;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    animation-name: fadeOut;
+    animation-duration: 15s; /* Duration of the animation */
+}
+
+/* Define the fadeOut animation */
+@keyframes error-alert {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+  }
+
+  @keyframes success-alert {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+  }
+  
+ 
 .search-bar-container {
     margin-right: 20px; /* Add some spacing between the search bar and other elements */
 }
